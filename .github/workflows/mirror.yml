@@ -14,4 +14,11 @@ jobs:
             REMOTE: ${{ secrets.SYNC_GIT_HOST }}
             GIT_USERNAME: Steve
             GIT_PASSWORD: ${{ secrets.GITLAB_KEY }}
+      - name: 'sync to merchat'
+        uses: yesolutions/mirror-action@master
+        with:
+            REMOTE: "git@github.com:NexaMerchant/merchant.git"
+            GIT_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+            GIT_SSH_NO_VERIFY_HOST: "true"
+
             
