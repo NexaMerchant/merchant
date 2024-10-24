@@ -186,7 +186,7 @@
                                 // var_dump($order->transactions[0]->data);
                                 if($order->payment->method=="paypal_smart_button") {
                                     $data = json_decode($order->transactions[0]->data, true);
-                                    $tran_id = $data[0]['payments']['captures']['0']['id'];
+                                    $tran_id = isset($data[0]['payments']['captures']['0']['id']) ? $data[0]['payments']['captures']['0']['id'] : "";
                                 }else{
                                     $tran_id = "";
                                 }
@@ -234,6 +234,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        if($order->sku_items->isEmpty()){
+                                            $order->sku_items = $order->items;
+                                        }
+                                        ?>
                                         @foreach ($order->sku_items as $item)
                                         <tr>
                                             <td>
@@ -261,6 +266,7 @@
                                             <td>{{ core()->formatBasePrice($item->base_total + $item->base_tax_amount - $item->base_discount_amount) }}</td>
                                         </tr>
                                         @endforeach
+
                                     </tbody>
                                 </table>
                             </div>

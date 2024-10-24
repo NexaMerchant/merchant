@@ -49,7 +49,7 @@ return [
     'Discount' => 'Discount',
     'Shipping' => 'Shipping',
     'Shipping Method' => 'Shipping Method',
-    'USPS Express' => '5-7 Days',
+    'USPS Express' => '5-8 Days',
     "Today's Total" => "Total",
     'price' => 'price',
     '2024 Alle Rechte vorbehalten' => '2024 Alle Rechte vorbehalten',
@@ -60,7 +60,7 @@ return [
     'Contact us' => 'Contact Us',
     'imprint' => 'imprint',
     'size chart' => 'Size Chart',
-    'During the summer sale the discount is valid for' => 'During the summer sale the discount is valid for',
+    'During the summer sale the discount is valid for' => 'During the Autumn Sale the discount is valid for',
     'All transactions are secure and encrypted' => 'All transactions are secure and encrypted.',
     'Please enter your first name!' => 'Please enter your first name!',
     'Please enter your last name!' => 'Please enter your last name!',
@@ -71,7 +71,7 @@ return [
     'Please insert a valid postal code!' => 'Please insert a valid postal code!',
     'Please select your country!' => 'Please select your country!',
     'Please select your state!' => 'Please select your state!',
-    'Please select product information!' => 'Please select product information!',
+    'Please select product information!' => 'Please select the product or it is out of stock!',
     'Select State' => 'Select State',
     'select country' => 'select country',
     'Add a house number if you have one' => 'Add a house number if you have one',
@@ -79,7 +79,8 @@ return [
     'Express checkout' => 'Express checkout',
     'edit' => 'Edit',
     'complete_secure_purchase' => 'Pay Now',
-    'Selected' => 'Selected'
+    'Selected' => 'Selected',
+    'Most Recommended' => 'Most Recommended'
   ],
   'v3' => [
     '30-Day Return' => '30-Day Return',
@@ -91,8 +92,17 @@ return [
     'Secure Checkout' => 'Secure Checkout',
     'sold in last' => 'sold in last',
     'hours' => 'hours',
-    'Estimated Delivery between' => 'Estimated Delivery between',
+    'Estimated Delivery between' => 'Estimated Delivery Between',
     'and' => 'and',
-    'People Looking For This Product' => 'People Looking For This Product'
+    'People Looking For This Product' => 'People Looking for This Product',
+    'Prev' => 'Prev',
+    'Next' => 'Next',
+    'Jump' => 'Jump',
+    'Please enter a valid page number' => 'Please enter a valid page number',
+    'Share' => 'Share'
+  ],
+  'v4' => [
+    'Save my card for future payments' => 'Save my card for future payments',
+    'Payment successful' => 'Payment successful'
   ]
 ];

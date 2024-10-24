@@ -4,11 +4,14 @@ return [
     'lang' => env('ONEBUY_DEFAULT_LANG'),
     'default_country' => env('ONEBUY_DEFAULT_COUNTRY'),
     'brand' => env('ONEBUY_BRAND', 'Hatme'),
-    'gtag' => env('ONEBUY_GTAG', "G-P6343Y2GKT"),
+    'gtag' => env('ONEBUY_GTAG', ""),
+    'gtm' => env('ONEBUY_GTM', ""),
     'fb_ids' => env('FB_IDS'),
     'ob_adv_id' => env('OB_ADV_ID'),
     'quora_adv_id' => env('QUORA_ID'),
     'crm_channel' => env('CRM_CHANNEL'),
+    'crm_url' => env('CRM_URL',''),
+    'paypal_rt' => env('ONEBUY_PAYPAL_RT'),
     'airwallex' => [
             'method' => [
                 'card',
@@ -28,5 +31,9 @@ return [
         'airwallex_dropin' => env('ONEBUY_PAYMENT_AIRWALLEX_DROPIN', 0),
         'airwallex_google'  => env('ONEBUY_PAYMENT_AIRWALLEX_GOOGLE', 0),
         'airwallex_appley'  => env('ONEBUY_PAYMENT_AIRWALLEX_APPLE', 0),
+    ],
+    'return_shipping_insurance' => [
+        'product_id' => env('ONEBUY_RETURN_SHIPPING_INSURANCE_PRODUCT_ID', 0),
+        'product_sku' => env('ONEBUY_RETURN_SHIPPING_INSURANCE_PRODUCT_SKU', ''),
     ]
 ];

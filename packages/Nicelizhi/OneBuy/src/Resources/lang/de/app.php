@@ -115,5 +115,18 @@ return [
       'Shipping' => 'Transport',
       'Total' => 'gesamt'
     ]
+  ],
+  'v4' => [
+    'Save my card for future payments' => 'Meine Karte für zukünftige Zahlungen speichern',
+    'Payment successful' => 'Zahlung erfolgreich',
+    'Thank You for Your Purchase!' => 'Danke für Ihren Einkauf!',
+    'Buy again at half price' => 'Nochmals kaufen zum halben Preis',
+    'Order now and enjoy half price discount' => 'Jetzt bestellen und den halben Preisnachlass genießen',
+    'Credit card' => 'Kreditkarte',
+    'Pay Now' => 'Jetzt bezahlen',
+    'Close' => 'Schließen',
+    'tip1' => '(1). Um Ihnen zu danken, haben wir für Sie ein spezielles Angebot vorbereitet! Sie können das ursprüngliche Produkt erneut für nur',
+    'tip2' => 'ohne die Zahlungsinformationen erneut eingeben!',
+    'tip3' => '(2). Die Bestellung zum halben Preis ist ein Sonderangebot für unsere glücklichen Kunden. Wir entschuldigen uns, können jedoch keine Rückerstattungsanträge für die erste Bestellung annehmen und den Benutzern gleichzeitig erlauben, die Bestellung zum halben Preis beizubehalten.'
   ]
 ];

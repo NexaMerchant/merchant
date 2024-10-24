@@ -3,7 +3,7 @@ return [
   'product' => [
     'Savings' => 'Savings',
     'piece' => 'piece',
-    'brand' => 'YooJe',
+    'brand' => 'Wmcer',
     'Size Chart' => 'Size Chart',
     'payment' => [
       'creditCard' => [
@@ -115,5 +115,18 @@ return [
       'Shipping' => 'transporte',
       'Total' => 'total'
     ]
+  ],
+  'v4' => [
+    'Save my card for future payments' => 'Guardar mi tarjeta para futuros pagos',
+    'Payment successful' => 'Pago exitoso',
+    'Thank You for Your Purchase!' => '¡Gracias por su compra!',
+    'Buy again at half price' => 'Compra de nuevo a mitad de precio',
+    'Order now and enjoy half price discount' => 'Haz tu pedido ahora y disfruta del 50 % de descuento',
+    'Credit card' => 'Tarjeta de crédito',
+    'Pay Now' => 'Pagar ahora',
+    'Close' => 'Cerca',
+    'tip1' => '(1). Por nuestra gran gracia, hemos preparado una oferta especial para usted! Puede comprar el producto original por',
+    'tip2' => 'sin ingresar la información de la tarjeta de crédito!',
+    'tip3' => '(2). El pedido a mitad de precio es una oferta especial para nuestros afortunados clientes; nos disculpamos, pero no podemos aceptar solicitudes de reembolso para el primer pedido mientras permitamos a los usuarios mantener el pedido a mitad de precio.'
   ]
 ];

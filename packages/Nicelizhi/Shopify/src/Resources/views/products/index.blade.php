@@ -28,9 +28,12 @@
                           <th>Title</th>
                           <th>handle</th>
                           <th>Status</th>
-                          <th>Checkout</th>
-                          <th>Checkout V2</th>
-                          <th>Checkout V3</th>
+                          <th>Clean Cache</th>
+                          <th>V1</th>
+                          <th>V2</th>
+                          <th>V3</th>
+                          <th>V4</th>
+                          <th>V5</th>
                           <th>updated at</th>
                           <th>Action</th>
                         </tr>
@@ -95,22 +98,41 @@
           ,
           {
             data: 'status'
-          },{
+          },
+          {
             data: 'product_id',
             render: function(data, type, row, meta) {
-              return '<a href="./products/checkout-url-get/'+data+'/onebuy" target="_blank" class="btn btn-primary btn-sm">Checkout URl</a>';
+              return '<a href="./products/clean-cache/'+data+'" class="btn btn-danger btn-sm" target="_blank">Clean Cache</a>';
+            }
+          },
+          {
+            data: 'product_id',
+            render: function(data, type, row, meta) {
+              return '<a href="./products/checkout-url-get/'+data+'/onebuy" target="_blank" class="btn btn-primary btn-sm">V1</a>';
             }
           }
           ,{
             data: 'product_id',
             render: function(data, type, row, meta) {
-              return '<a href="/checkout/v2/'+ data +'" target="_blank" class="btn btn-primary btn-sm">Checkout V2</a>';
+              return '<a href="/checkout/v2/'+ data +'" target="_blank" class="btn btn-primary btn-sm">V2</a>';
             }
           }
           ,{
             data: 'product_id',
             render: function(data, type, row, meta) {
-              return '<a href="/checkout/v3/'+data+'" target="_blank" class="btn btn-primary btn-sm">Checkout V3</a>';
+              return '<a href="/checkout/v3/'+data+'" target="_blank" class="btn btn-primary btn-sm">V3</a>';
+            }
+          }
+          ,{
+            data: 'product_id',
+            render: function(data, type, row, meta) {
+              return '<a href="/checkout/v4/'+data+'" target="_blank" class="btn btn-primary btn-sm">V4</a>';
+            }
+          },
+          {
+            data: 'product_id',
+            render: function(data, type, row, meta) {
+              return '<a href="https://shop-v5.hatmeo.com/checkout/dollar/'+data+'" target="_blank" class="btn btn-sm">USA V5 USD</a><a href="https://shop-v5.hatmeo.com/checkout/adollar/'+data+'" target="_blank" class="btn btn-sm">USA V5 AUD</a><a href="https://offer-v5.hatme.de/checkout/euro/'+data+'" target="_blank" class="btn btn-sm">DE V5</a><a href="https://offer-v5.botma.fr/checkout/euro/'+data+'" target="_blank" class="btn btn-sm">FR V5</a><a href="https://shop-v5.yooje.uk/checkout/pound/'+data+'" target="_blank" class="btn btn-sm">UK V5</a><a href="https://shop-v5.wmcer.com/checkout/euro/'+data+'" target="_blank" class="btn btn-sm">ES V5</a>';
             }
           }
           ,
@@ -120,7 +142,7 @@
           {
             data: "product_id",
             render: function(data, type, row, meta) {
-              return '<a href="./products/sync/'+data+'" title="product sync"><i class="fas fa-sync"></i></a> <a href="./products/images/'+data+'/onebuy" title="product images"><i class="fas fa-images"></i></a> <a href="./products/comments/'+data+'/onebuy?locale={{ app()->getLocale() }}" title="product comments"><i class="fas fa-comments"></i></a> <a href="./products/info/'+data+'/onebuy?locale={{ app()->getLocale() }}" title="product info"><i class="fas fa-info-circle"></i> </a> <a href="./products/sell-points/'+data+'/onebuy?locale={{ app()->getLocale() }}" title="sell points"> <i class="fa fa-building"></i> </a> ';
+              return '<a href="./products/sync/'+data+'" title="product sync"><i class="fas fa-sync"></i></a> <a href="./products/images/'+data+'/onebuy" title="product images"><i class="fas fa-images"></i></a> <a href="./products/comments/'+data+'/onebuy?locale={{ app()->getLocale() }}" title="product comments"><i class="fas fa-comments"></i></a> <a href="./products/info/'+data+'/onebuy?locale={{ app()->getLocale() }}" title="product info"><i class="fas fa-info-circle"></i> </a> <a href="./products/sell-points/'+data+'/onebuy?locale={{ app()->getLocale() }}" title="sell points"> <i class="fa fa-building"></i> </a> <a href="./products/checkout-customer-code/'+data+'?locale={{ app()->getLocale() }}" title="Customize"> <i class="fa fa-code"></i> </a> ';
             }
           }
         ],
@@ -128,7 +150,7 @@
             [20, 50, 100],
             [20, 50, 100]
         ],
-        order: [[7, 'desc']],
+        order: [[10, 'desc']],
         processing: true,
         serverSide: true,
         

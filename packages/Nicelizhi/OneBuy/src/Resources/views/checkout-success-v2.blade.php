@@ -14,6 +14,26 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-colorbox@1.6.4/jquery.colorbox.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/jquery-colorbox@1.6.4/example1/colorbox.min.css" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', '<?php echo $gtm;?>');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <style>
     :root {
       --text-family: Poppins, sans-serif;
@@ -603,6 +623,20 @@
         });
       <?php } ?>
 
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+      
+        eventType: 'conversion',
+        conversionClass: 'order',
+        conversionSubClass: 'purchase',
+        conversionId: '<?php echo $order->id; ?>',
+        offerIds: <?php echo json_encode($line_items); ?>,
+        conversionValue: (value * 1).toFixed(2),
+        conversionCurrency: '<?php echo $order->channel_currency_code; ?>',
+
+
+      });
+
 
 
       gtag('event', 'purchase', {
@@ -870,7 +904,9 @@
   <footer class="main__footer" role="contentinfo">
     @include('onebuy::footer-container-'.strtolower($default_country))
   </footer>
-
+  <?php if($default_country=='US') {?>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16498281514"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16498281514'); </script>
+  <?php } ?>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $gtag; ?>"></script>
   <script>
@@ -893,11 +929,7 @@
   </script>
   <script>
     $(function() {
-      console.log(<?php echo json_encode($line_items); ?>, '$line_items');
-      console.log('<?php echo json_encode($products); ?>', 'products');
-      console.log(<?php echo $order; ?>, '$order');
-      console.log('<?php echo $order->shipping_address; ?>', '$$order->shipping_address');
-      console.log('<?php echo $order->billing_address; ?>', '$$order->billing_address');
+   
     })
 
     function getRecommended(path) {
